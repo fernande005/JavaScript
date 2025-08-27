@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Consumo</title>
+</head>
+<body>
+    <script>
+        function mediaConsumo(distancia, litros) {
+            var media = distancia / litros;
+            return Math.ceil(media);
+        }
+
+        var distancia = Number(prompt('Digite a distância percorrida (km):'));
+        var litros = Number(prompt('Digite a quantidade de litros consumidos:'));
+
+        var resultado = mediaConsumo(distancia, litros);
+        document.write('A média de consumo arredondada para cima é: ' + resultado + ' km/l');
+    </script>
+</body>
+</html>

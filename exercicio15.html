@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Input</title>
+    <style>
+        .foco {
+            background: yellow;
+        }
+        .erro {
+            background: red;
+            color: white;
+        }
+        .ok {
+            background: green;
+            color: white;
+        }
+    </style>
+    <script>
+        function aoFocar(campo) {
+            campo.classList.remove('erro', 'ok');
+            campo.classList.add('foco');
+        }
+
+        function aoPerderFoco(campo) {
+            campo.classList.remove('foco');
+            if (campo.value.length < 3) {
+                campo.classList.add('erro');
+                campo.classList.remove('ok');
+            } else {
+                campo.classList.add('ok');
+                campo.classList.remove('erro');
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="campo">Digite algo:</label>
+    <input type="text" id="campo"
+        onfocus="aoFocar(this)"
+        onblur="aoPerderFoco(this)">
+</body>
+</html>

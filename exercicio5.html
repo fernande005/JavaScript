@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meses por Quantidade de Dias</title>
+</head>
+<body>
+    <script>
+        var dias = prompt("Digite a quantidade de dias (28, 30 ou 31):");
+
+        switch (dias) {
+            case "28":
+                document.write("Mês com 28 dias: Fevereiro");
+                break;
+            case "30":
+                document.write("Meses com 30 dias: Abril, Junho, Setembro, Novembro");
+                break;
+            case "31":
+                document.write("Meses com 31 dias: Janeiro, Março, Maio, Julho, Agosto, Outubro, Dezembro");
+                break;
+            default:
+                document.write("Quantidade não encontrada. Use 28, 30 ou 31.");
+        }
+    </script>
+</body>
+</html>
